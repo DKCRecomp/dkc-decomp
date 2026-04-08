@@ -36,16 +36,20 @@ The disassemble uses the following project structure:
 
 ```
 dkc-recomp/
+|
 ├── Makefile              # Build configuration
 ├── hdr.asm               # Game header
 ├── snes.asm              # SNES register definitions
+|
 ├── bank_00.asm           # Bank 0 assembly code
 ├── bank_01.asm           # Bank 1 assembly code
 ├── ...                   # Additional banks
 ├── spc700.asm            # SPC700 audio assembly code
+|
 ├── sprites1_gfx.chr      # Extracted graphics (if configured)
 ├── sprites1_gfx.png      # PNG preview (if palette provided)
 ├── sprites1_pal.pal      # Extracted palettes
+|
 └── game.smc              # Reassembled ROM (after make)
 ```
 
