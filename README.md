@@ -19,7 +19,7 @@ The purpose of the project is to recreate a source code base for the game from s
 
 The only version currently supported is `SNES US v1.0`. It was initially made by using [`snes2asm`](https://github.com/nathancassano/snes2asm) disassembly tool on a SNES ROM copy. 
 
-As assets are proprietary copyrighted by Nintendo Ltd and Rare, you will not find any of theses in this project. Sharing these here would make us taken out.
+As assets are proprietary copyrighted by Nintendo Ltd and Rare, you will not find any of these in this project. Sharing it here would make us taken down.
 
 You can additionnally use `snes2asm` for data assets such as `graphics`, `tilemaps`, `palettes`, `audio`, and `text` (See it's [Configuration section](https://github.com/nathancassano/snes2asm?tab=readme-ov-file#configuration)).
 
