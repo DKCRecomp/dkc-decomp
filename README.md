@@ -22,7 +22,7 @@ The purpose of the project is to recreate a source code base for the game from s
 
 The only version currently supported is `SNES US v1.0`. It was initially made by using [`snes2asm`](https://github.com/nathancassano/snes2asm) disassembly tool on a SNES US v1.0 ROM copy. 
 
-This decompilation mostly contains game and audio code. As assets are proprietary and copyrighted by Nintendo Ltd, you will not find any of these in this project. Sharing it here would make us taken down.
+This decompilation mostly contains game and audio code. As assets are proprietary and copyrighted by Nintendo Ltd, you will not find any of these in this project. Sharing it here would take us down.
 
 You can use `snes2asm` for data assets such as `graphics`, `tilemaps`, `palettes`, `audio`, and `text` and be extracted by specifying a YAML configuration file. (See [Configuration](https://github.com/nathancassano/snes2asm?tab=readme-ov-file#configuration) section).
 
@@ -72,5 +72,6 @@ make
 ## References
 
 - [`snes2asm`](https://github.com/nathancassano/snes2asm) - tool which initially permitted this decompilation.
-- [`p4plus2/DKC2-disassembly`](https://github.com/p4plus2/DKC2-disassembly) - Disassembly of Donkey Kong Country 2, for docs, code and structure reference.
+- [`p4plus2/DKC2-disassembly`](https://github.com/p4plus2/DKC2-disassembly) - Disassembly of DKC 2, for docs, code and structure reference.
+- [`Comp/Decomp Country (DKC ROM Hacking Tool)`](https://dreamthreshold.github.io/DKC/CompDecompCountry) - Compresses and decompresses graphics from DKC, and can extract tilesets and palettes
 - [`zeldaret/mm`](https://github.com/zeldaret/mm) - Decompilation of The Legend of Zelda: Majora's Mask, for readme structure reference.
