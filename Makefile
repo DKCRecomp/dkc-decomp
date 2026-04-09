@@ -1,4 +1,6 @@
-# ----- Assembler -----
+# DKC disassembly
+
+# ----- assembler -----
 
 ASSEMBLER_NAME=WLA-DX
 ASSEMBLER=wla-65816
@@ -6,18 +8,33 @@ ASSEMBLER_AUDIO=wla-spc700
 ASSEMBLER_REPO=https://github.com/vhelin/wla-dx
 LINKER=wlalink
 
-# ----- Tools -----
+ASSEMBLER_MSG="Please install $(ASSEMBLER_NAME) ASSEMBLER: $(ASSEMBLER_REPO)"
+
+# ----- tools -----
 
 BMP2CHR=bmp2chr
 PACKER=packer
 BRR=brr
 
-# ----- Game -----
+# ----- game -----
 
-ROM=dkc
+ROM=dkc.$(ROM_EXT)
+ROM_EXT=smc
+
 COBJ=dkc.o
 
-all: check-wla graphics sound spc700 encodings $(ROM).smc
+# ----- paths -----
+
+SRC=$(CURDIR)/src
+
+# ----- output -----
+
+BUILD_DIR=$(CURDIR)/build
+TARGET=$(BUILD_DIR)/$(ROM)
+
+# ---------------
+
+all: check-wla create-build-dir graphics sound spc700 encodings $(TARGET)
 	echo "Done"
 
 # Check if WLA-DX binaries are available
@@ -50,6 +67,10 @@ check-wla:
 		echo ""; \
 		exit 1; \
 	}
+
+.PHONY: create-build-dir
+create-build-dir:
+	mkdir -p $(BUILD_DIR)
 
 .PHONY: graphics
 graphics: $(patsubst %.bmp,%.chr,$(wildcard *2bpp.bmp *3bpp.bmp *4bpp.bmp *8bpp.bmp))
@@ -94,8 +115,8 @@ main.s: $(wildcard *.asm)
 $(COBJ): $(wildcard *.s)
 	$(ASSEMBLER) -x -v -o $@ $<
 
-$(ROM).smc: $(COBJ)
-	$(LINKER) -d -v -S linkfile $(ROM).smc
+$(BUILD_DIR)/$(ROM): $(COBJ)
+	$(LINKER) -d -v -S linkfile $(BUILD_DIR)/$(ROM)
 
 clean:
-	rm -f $(ROM).smc $(COBJ) *.obj *.o *.linkfile
+	rm -rf $(BUILD_DIR) $(ROM) $(COBJ) *.obj *.o *.linkfile
