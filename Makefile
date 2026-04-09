@@ -109,14 +109,15 @@ encodings:
 
 
 
-main.s: $(wildcard *.asm)
-	touch main.s
+$(SRC)/main.s: $(wildcard $(SRC)/*.asm)
+	touch $(SRC)/main.s
 
-$(COBJ): $(wildcard *.s)
+$(COBJ): $(wildcard $(SRC)/*.s)
 	$(ASSEMBLER) -x -v -o $@ $<
 
 $(BUILD_DIR)/$(ROM): $(COBJ)
 	$(LINKER) -d -v -S linkfile $(BUILD_DIR)/$(ROM)
+	mv $(COBJ) $(BUILD_DIR)
 
 clean:
-	rm -rf $(BUILD_DIR) $(ROM) $(COBJ) *.obj *.o *.linkfile
+	rm -rf $(BUILD_DIR) *.obj *.o *.linkfile
