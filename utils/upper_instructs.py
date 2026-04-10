@@ -5,7 +5,7 @@ import sys
 # ----- Globals -----
 
 REPO_ROOT = Path(__file__).parent.parent
-BANKS_DIR = REPO_ROOT / 'src' / 'banks'
+BANKS_PATH = REPO_ROOT / 'src' / 'banks'
 
 mnemonics = [
     'adc','and','asl','bcc','bcs','beq','bit','bmi','bne','bpl','bra','brk',
@@ -18,33 +18,33 @@ mnemonics = [
     'txs','txy','tya','tyx','wai','wdm','xba','xce'
 ]
 
-# Regex : mnem in lowercase
+# Regex : lowercased mnemonices
 pattern = re.compile(r'\b(' + '|'.join(mnemonics) + r')\b')
 
 def main():
-    if not REPO_ROOT.exists():
-        print(f"Directory not found: {REPO_ROOT}")
-        sys.exit(1)
     upper_instructions()
 
 def upper_instructions():
     print(f'\nSupported mnemonics: \n{mnemonics}\n')
     print("Start upping instructions...\n")
 
-    nb_files=0
-    for f in sorted(BANKS_DIR.glob('*.asm')):
+    files = sorted(BANKS_PATH.glob('*.asm'))
+    for file in files:
+        content = file.read_text(errors='replace')
+        remplace_content(file, content)
 
-        content = f.read_text(errors='replace')
-        new_content, count = pattern.subn(upper_instruction, content)
+    print(f"\nDone.\n")
 
-        if count > 0:
-            f.write_text(new_content)
-            print(f"  {f.name:20s}  {count} replacements")
-            nb_files += 1
-   
-    print(f"\nDone, {nb_files} files modified.\n")
+def remplace_content(file, content):
+    new_content, count = get_upper_instructions(content)
+    if count > 0:
+        file.write_text(new_content)
+    print(f"  {file.name:20s} - {count} replacements found")
 
-def upper_instruction(instr):
+def get_upper_instructions(content):
+    return pattern.subn(get_upper_instr, content)
+
+def get_upper_instr(instr):
     return instr.group(0).upper()
 
 if __name__ == '__main__':
