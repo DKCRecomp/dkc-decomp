@@ -14,8 +14,6 @@ using information found inside the game along with static and/or dynamic analysi
 ## Table of contents
 - [Overview](#overview)
 - [Features](#features)
-- [Structure](#structure)
-- [About the Game](#about-the-game)
 - [Usage](#usage)
 - [References](#references)
 
@@ -33,80 +31,6 @@ This decompilation mostly contains game and audio code. Assets are proprietary a
 ## Features
 * ROM disassembly.
 * SPC700 audio processor disassembly support.
-
-## Structure
-
-The project uses the following structure:
-
-```
-DKC-disassembly/
-|
-├── src/                    # Code entrypoint
-|   ├── snes/               # SNES register definitions
-|   ├── header/             # Game header
-|   ├── constants/          # Build configuration
-|   ├── banks/              # Banks assembly code
-|   ├── spc700/             # SPC700 audio assembly code
-|   |
-|   └── main.s              # Includes and structures code files
-|
-├── utils/                  # Utility tools
-|   └── upper_instructs.py  # Upper case all banks instructions
-|
-├── build/                  # Build result (after make)
-|   └── dkc.smc             # Reassembled ROM (after make)
-|
-├── sprites1_gfx.chr        # Extracted graphics (if configured)
-├── sprites1_gfx.png        # PNG preview (if palette provided)
-├── sprites1_pal.pal        # Extracted palettes (if configured)      
-|
-├── Makefile                # Build configuration  
-├── linkfile                # Linking code 
-└── linkfile_spc            # Linking audio code
-```
-
-## About the Game
-
-### ROM Specs
-
-This decompilation was done by decompiling a game ROM using `snes2asm`.
-Here are specific informations about that ROM, from `Mesen` emulator:
-
-- Game: `DONKEY KONG COUNTRY`
-- Frequency mode: `NTSC-C` 
-- Game code: `8X`
-- Type: `HiROM`
-- `FastROM`
-- Map Mode: `$31`
-- Rom Type: `$02`
-- File size: `4096 KB`
-- ROM size: `4096 KB`
-- SRAM size: `2 KB (with battery)`
-- Battery: `yes`
-
-### Banks Miror Labels
-
-As the ROM is of type HiROM, `snes2asm` generate two labels by entrypoint for each bank with mirrored adresses.
-For example in `bank00.asm` :
-
-```asm
-.BASE $80
-L800000:    ; Label with $80 prefix (FastROM mirror)
-.BASE $00
-L000000:    ; Label with $00 (HiROM actual adress)
-```
-
-Here is the memory map used for HiROM :
-
-snes2asm|    Adresses    |  Content
-:------:|:--------------:|:---------:
- bank00 | $C0: 0000–FFFF | Code/Data
- bank01 | $C1: 0000–FFFF |    //
-  ...   |      ...       |    //
- bank3F | $FF: 0000–FFFF |    //
- bank40 | $40: 0000–FFFF |   Data
-  ...   |      ...       |    //
- bank63 | $63: 0000–FFFF |    //
 
 ## Usage
 
