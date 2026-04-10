@@ -1,30 +1,32 @@
 
-![image-header](https://mario.wiki.gallery/images/b/b0/DK_%26_Diddy.png)
+![header](https://mario.wiki.gallery/images/b/b0/DK_%26_Diddy.png)
 
-Donkey Kong Country (US) 1.0
-========
+Donkey Kong Country
+===
 
 This is a WIP decompilation of Donkey Kong Country. 
 
-The purpose of the project is to recreate a source code base for the game from scratch, using information found inside the game along with static and/or dynamic analysis. 
+The purpose of the project is to recreate a source code base for the game from scratch, 
+using information found inside the game along with static and/or dynamic analysis. 
 
 **It is not, and will not, produce a PC port**.
 
 ## Table of Contents
 - [Overview](#overview)
 - [Features](#features)
+- [Game Information](#game-information)
 - [Structure](#structure)
 - [Usage](#usage)
 - [References](#references)
 
 ## Overview
 
-The only version currently supported is `SNES US v1.0`. 
+The only version currently used is `SNES US v1.0`. 
 It was initially made by using [`snes2asm`](https://github.com/nathancassano/snes2asm) disassembly tool on a SNES US v1.0 ROM copy. 
 
 >[!NOTE]
 >This decompilation mostly contains game and audio code. Assets are proprietary and copyrighted by Nintendo Ltd, you will not find any of these here.
->You can still use a legally provided ROM with `snes2asm` for data assets such as `graphics`, `tilemaps`, `palettes`, `audio`, `text` and be extracted by specifying a YAML configuration file.
+>You can still use `snes2asm` with a legally provided ROM, for data assets such as `graphics`, `tilemaps`, `palettes`, `audio`, `text` and be extracted by specifying a YAML configuration file.
 > (See [Configuration](https://github.com/nathancassano/snes2asm?tab=readme-ov-file#configuration) section).
 
 ## Features
@@ -33,7 +35,7 @@ It was initially made by using [`snes2asm`](https://github.com/nathancassano/sne
 
 ## Structure
 
-The disassemble uses the following project structure:
+The project uses the following structure:
 
 ```
 DKC-disassembly/
@@ -59,6 +61,48 @@ DKC-disassembly/
 └── linkfile_spc          # Linking audio code
 ```
 
+## About the Game
+
+### ROM Specs
+
+This decompilation was done by decompiling a game ROM using `snes2asm`.
+Here are specific informations about that ROM, from `Mesen` emulator:
+
+- Game: `DONKEY KONG COUNTRY`
+- Game code: `8X`
+- Type: `HiROM`
+- `FastROM`
+- Map Mode: `$31`
+- Rom Type: `$02`
+- File size: `4096 KB`
+- ROM size: `4096 KB`
+- SRAM size: `2 KB (with battery)`
+- Battery: `yes`
+
+### Banks Miror Labels
+
+As the ROM is of type HiROM, `snes2asm` generate two labels by entrypoint for each bank with mirrored adresses.
+For example in `bank00.asm` :
+
+```asm
+.BASE $80
+L800000:    ; Label with $80 prefix (FastROM mirror)
+.BASE $00
+L000000:    ; Label with $00 (HiROM actual adress)
+```
+
+Here is the memory map used for HiROM :
+
+snes2asm|  Real adress  |  Content
+:------:|:-------------:|:---------:
+ bank00 | $C0:0000–FFFF | Code/Data
+ bank01 | $C1:0000–FFFF |    //
+  ...   |      ...      |    //
+ bank3F | $FF:0000–FFFF |    //
+ bank40 | $40:0000–FFFF |   Data
+  ...   |      ...      |    //
+ bank63 | $63:0000–FFFF |    //
+
 ## Usage
 
 ### Requirements
@@ -66,6 +110,7 @@ DKC-disassembly/
 For compiling the project, you will need:
 
 * **[WLA-DX Assembler](https://github.com/vhelin/wla-dx)**
+
 * **GNU Make**
 
 ### Compilation
@@ -74,8 +119,11 @@ You can test compilation and reassemble ROM :
 
 ```bash
 cd DKC-disassembly
+
 # Edit Makefile PREFIX to point to your wla-dx install path
+
 make # Once done, it will create result in a build/ directory. 
+
 # Run the dkc.smc file in your emulator.
 ```
 
