@@ -14,7 +14,7 @@ DKC-disassembly/
 |   |
 |   └── main.s              # Includes and structures code files
 |
-├── utils/                  # Utility tools
+├── tools/                  # Utility tools
 |   └── upper_instructs.py  # Upper case all banks instructions
 |
 ├── build/                  # Build result (after make)
