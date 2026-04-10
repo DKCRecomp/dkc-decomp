@@ -8,14 +8,31 @@ REPO_ROOT = Path(__file__).parent.parent
 BANKS_PATH = REPO_ROOT / 'src' / 'banks'
 
 mnemonics = [
-    'adc','and','asl','bcc','bcs','beq','bit','bmi','bne','bpl','bra','brk',
-    'brl','bvc','bvs','clc','cld','cli','clv','cmp','cop','cpx','cpy','dec',
-    'dex','dey','eor','inc','inx','iny','jml','jmp','jsl','jsr','lda','ldx',
-    'ldy','lsr','mvn','mvp','nop','ora','pea','pei','per','pha','phb','phd',
-    'phk','php','phx','phy','pla','plb','pld','plp','plx','ply','rep','rol',
-    'ror','rti','rtl','rts','sbc','sec','sed','sei','sep','sta','stp','stx',
-    'sty','stz','tax','tay','tcd','tcs','tdc','trb','tsb','tsc','tsx','txa',
-    'txs','txy','tya','tyx','wai','wdm','xba','xce'
+    'adc','and','asl',
+    'bcc','bcs','beq','bit','bmi','bne','bpl','bra','brk','brl','bvc','bvs',
+    'clc','cld','cli','clv','cmp','cop','cpx','cpy',
+    'dec','dex','dey',
+    'eor',
+    'inc','inx','iny',
+    'jml','jmp','jsl','jsr',
+    'lda','ldx','ldy','lsr',
+    'mvn','mvp',
+    'nop',
+    'ora',
+    'pea','pei','per',
+    'pha','phb','phd','phk','php','phx','phy',
+    'pla','plb','pld','plp','plx','ply',
+    'rep','rol','ror','rti','rtl','rts',
+    'sbc','sec','sed','sei','sep',
+    'sta','stp','stx','sty','stz',
+    'tax','tay',
+    'tda',
+    'tcd','tcs','tdc','tsc',
+    'tad','tas',
+    'trb','tsa','tsb','tsx',
+    'txa','txs','txy','tya','tyx',
+    'wai','wdm',
+    'xba','xce'
 ]
 
 # Regex : lowercased mnemonices

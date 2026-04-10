@@ -1310,7 +1310,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -1723,7 +1723,7 @@
 	DEC A		; 3A
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	RTI		; 40
 
 	ADC $40.b,X		; 75 40
@@ -2246,7 +2246,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -2424,7 +2424,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -2797,7 +2797,7 @@
 	DEC A		; 3A
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	RTI		; 40
 
 	ADC $40.b,X		; 75 40
@@ -3776,7 +3776,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -4278,7 +4278,7 @@
 	DEC A		; 3A
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	RTI		; 40
 
 	ADC $40.b,X		; 75 40
@@ -4573,7 +4573,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -7095,7 +7095,7 @@
 	DEC A		; 3A
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	RTI		; 40
 
 	ROR $00.b,X		; 76 00
@@ -7387,7 +7387,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	RTI		; 40
 
 	JMP ($0240.w,X)		; 7C 40 02
@@ -9124,7 +9124,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	RTI		; 40
 
 	JMP ($0240.w,X)		; 7C 40 02
@@ -10524,7 +10524,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	RTI		; 40
 
 	JMP ($0240.w,X)		; 7C 40 02
@@ -12468,7 +12468,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	RTI		; 40
 
 	JMP ($0240.w,X)		; 7C 40 02
@@ -27931,7 +27931,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	RTI		; 40
 
 	JMP ($0240.w,X)		; 7C 40 02
@@ -30207,7 +30207,7 @@
 	ORA ($B0.b,X)		; 01 B0
 	RTI		; 40
 
-	tas		; 1B
+	TAS		; 1B
 	ORA ($44.b,X)		; 01 44
 	ORA ($45.b,X)		; 01 45
 	ORA ($46.b,X)		; 01 46
@@ -33348,7 +33348,7 @@
 	BRK $78.b		; 00 78
 	BRK $78.b		; 00 78
 	BRK $78.b		; 00 78
-	tad		; 5B
+	TAD		; 5B
 	ORA $095C.w,Y		; 19 5C 09
 	BRK $08.b		; 00 08
 	BRK $08.b		; 00 08

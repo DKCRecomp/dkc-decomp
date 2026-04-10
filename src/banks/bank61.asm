@@ -157,7 +157,7 @@
 	DEY		; 88
 	CPX #$F8E0.w		; E0 E0 F8
 	SED		; F8
-	tsa		; 3B
+	TSA		; 3B
 	PLX		; FA
 	AND $FC3CFF.l,X		; 3F FF 3C FC
 	LDX $8FFE.w,Y		; BE FE 8F
@@ -657,7 +657,7 @@
 	BRK $1D.b		; 00 1D
 	ORA $A0.b,S		; 03 A0
 	JSR $00C0.w		; 20 C0 00
-	tda		; 7B
+	TDA		; 7B
 	TSB $0E.b		; 04 0E
 	BRK $05.b		; 00 05
 	ORA ($9E.b,X)		; 01 9E
@@ -693,7 +693,7 @@
 	ADC $7F7F7F.l,X		; 7F 7F 7F 7F
 	ADC $7FFF7F.l,X		; 7F 7F FF 7F
 	SBC $7F7F7F.l,X		; FF 7F 7F 7F
-	tda		; 7B
+	TDA		; 7B
 	ADC $030303.l,X		; 7F 03 03 03
 	ORA $0F.b,S		; 03 0F
 	ORA $FD1E1E.l		; 0F 1E 1E FD
@@ -783,7 +783,7 @@
 	SBC [$FA.b],Y		; F7 FA
 	XCE		; FB
 	SBC $FDFFFE.l,X		; FF FE FF FD
-	tsa		; 3B
+	TSA		; 3B
 	BRK $BF.b		; 00 BF
 	BRA -47.b		; 80 D1
 	CPX #$E9.b		; E0 E9
@@ -950,7 +950,7 @@
 	ASL $3C.b		; 06 3C
 	.db $42, $00		; 42 00
 	BRK $76.b		; 00 76
-	tad		; 5B
+	TAD		; 5B
 	ROR $5B.b		; 66 5B
 	LSR $5B.b,X		; 56 5B
 	EOR ($6B.b)		; 52 6B
@@ -967,13 +967,13 @@
 	.db $82, $6B, $86		; 82 6B 86
 	AND ($8D.b,S),Y		; 33 8D
 	AND ($59.b,S),Y		; 33 59
-	tda		; 7B
+	TDA		; 7B
 	LSR $6E7B.w,X		; 5E 7B 6E
 	EOR $99.b,S		; 43 99
 	EOR ($80.b,S),Y		; 53 80
-	tda		; 7B
+	TDA		; 7B
 	JMP ($747B.w)		; 6C 7B 74
-	tda		; 7B
+	TDA		; 7B
 	JMP ($6E7B.w,X)		; 7C 7B 6E
 	CMP ($CF.b),Y		; D1 CF
 	JSR $409F.w		; 20 9F 40
@@ -1075,7 +1075,7 @@
 	STA $9999.w,Y		; 99 99 99
 	STA $9F99.w,Y		; 99 99 9F
 	STA $FF9F9F.l,X		; 9F 9F 9F FF
-	tsa		; 3B
+	TSA		; 3B
 	SBC $7FFF7F.l,X		; FF 7F FF 7F
 	SBC $FFFFFF.l,X		; FF FF FF FF
 	SBC $3FFE7E.l,X		; FF 7E FE 3F
@@ -1277,7 +1277,7 @@
 	BRK $01.b		; 00 01
 	BRK $00.b		; 00 00
 	CMP $7F77FF.l,X		; DF FF 77 7F
-	tsa		; 3B
+	TSA		; 3B
 	AND $0F1F1C.l,X		; 3F 1C 1F 0F
 	ORA $010303.l		; 0F 03 03 01
 	ORA ($00.b,X)		; 01 00
@@ -1328,7 +1328,7 @@
 	REP #$C0		; C2 C0
 	CMP ($E0.b,X)		; C1 E0
 	ADC ($EB.b,X)		; 61 EB
-	tsa		; 3B
+	TSA		; 3B
 	SBC ($0F.b)		; F2 0F
 	STA [$FC.b]		; 87 FC
 	ADC ($01.b),Y		; 71 01
@@ -1340,7 +1340,7 @@
 	BRK $FE.b		; 00 FE
 	BRK $FF.b		; 00 FF
 	BRK $C7.b		; 00 C7
-	tda		; 7B
+	TDA		; 7B
 	SBC $00FF18.l		; EF 18 FF 00
 	SBC $807980.l,X		; FF 80 79 80
 	PLX		; FA
@@ -1457,7 +1457,7 @@
 	XCE		; FB
 	TSB $F1.b		; 04 F1
 	ASL $00C7.w		; 0E C7 00
-	tda		; 7B
+	TDA		; 7B
 	STY $01.b		; 84 01
 	ORA ($03.b,X)		; 01 03
 	ORA $00.b,S		; 03 00
@@ -1708,7 +1708,7 @@
 	PEI ($68.b)		; D4 68
 	DEC $0C.b,X		; D6 0C
 	SBC [$18.b],Y		; F7 18
-	tda		; 7B
+	TDA		; 7B
 	BRA -97.b		; 80 9F
 	BRK $17.b		; 00 17
 	JSR $0064.w		; 20 64 00
@@ -1911,7 +1911,7 @@
 	ORA $0A2E02.l		; 0F 02 2E 0A
 	ROL $0048.w,X		; 3E 48 00
 	BRK $76.b		; 00 76
-	tad		; 5B
+	TAD		; 5B
 	ROR $5B.b		; 66 5B
 	LSR $5B.b,X		; 56 5B
 	EOR ($6B.b)		; 52 6B
@@ -1930,10 +1930,10 @@
 	EOR $65.b,S		; 43 65
 	EOR $9D.b,S		; 43 9D
 	EOR $80.b,S		; 43 80
-	tda		; 7B
+	TDA		; 7B
 	LDX #$4E43.w		; A2 43 4E
 	ADC [$6C.b]		; 67 6C
-	tda		; 7B
+	TDA		; 7B
 	STZ $7B.b,X		; 74 7B
 	JMP ($3F7B.w,X)		; 7C 7B 3F
 	BRK $3F.b		; 00 3F
@@ -2018,7 +2018,7 @@
 	SBC $FFFFFF.l,X		; FF FF FF FF
 	SBC $FFBFFF.l,X		; FF FF BF FF
 	SBC $FFC7FF.l,X		; FF FF C7 FF
-	tda		; 7B
+	TDA		; 7B
 	ADC $FF3FFF.l,X		; 7F FF 3F FF
 	AND $FF13FF.l,X		; 3F FF 13 FF
 	BRK $FF.b		; 00 FF
@@ -2693,7 +2693,7 @@
 	STZ $3E60.w,X		; 9E 60 3E
 	ORA ($25.b,X)		; 01 25
 	ORA $1E.b,S		; 03 1E
-	tsa		; 3B
+	TSA		; 3B
 	TSX		; BA
 	ORA $FF10EE.l,X		; 1F EE 10 FF
 	BRK $FF.b		; 00 FF
@@ -2921,7 +2921,7 @@
 	BRK $FF.b		; 00 FF
 	BRK $FF.b		; 00 FF
 	COP $FE.b		; 02 FE
-	tas		; 1B
+	TAS		; 1B
 	JSR ($EC98.w,X)		; FC 98 EC
 	JMP.w [$C06C]		; DC 6C C0
 	ASL $2C04.w		; 0E 04 2C
@@ -2954,7 +2954,7 @@
 	SEI		; 78
 	EOR $698A69.l		; 4F 69 8A 69
 	ADC $49.b,S		; 63 49
-	tad		; 5B
+	TAD		; 5B
 	EOR ($1C.b),Y		; 51 1C
 	JSR ($FE1E.w,X)		; FC 1E FE
 	ASL $0EFE.w,X		; 1E FE 0E
@@ -3151,7 +3151,7 @@
 	ORA $00.b,S		; 03 00
 	ORA $001F00.l		; 0F 00 1F 00
 	ADC $007F00.l,X		; 7F 00 7F 00
-	tas		; 1B
+	TAS		; 1B
 	BRK $E2.b		; 00 E2
 	AND $68FF30.l,X		; 3F 30 FF 68
 	SBC $FAEB64.l,X		; FF 64 EB FA
@@ -3741,7 +3741,7 @@
 	BRK $FE.b		; 00 FE
 	BRK $FE.b		; 00 FE
 	CPY #$FE.b		; C0 FE
-	tas		; 1B
+	TAS		; 1B
 	CPX #$18.b		; E0 18
 	CPX #$13.b		; E0 13
 	CPX #$FE.b		; E0 FE
@@ -4043,7 +4043,7 @@
 	ORA $000F00.l		; 0F 00 0F 00
 	ORA $FFDF20.l,X		; 1F 20 DF FF
 	SBC $FFEFFF.l,X		; FF FF EF FF
-	tad		; 5B
+	TAD		; 5B
 	ADC $0F1F1F.l,X		; 7F 1F 1F 0F
 	ORA $3F0F0F.l		; 0F 0F 0F 3F
 	AND $FF0FFF.l,X		; 3F FF 0F FF
@@ -4439,7 +4439,7 @@
 	ASL $0F23.w,X		; 1E 23 0F
 	BPL   6.b		; 10 06
 	XCE		; FB
-	tda		; 7B
+	TDA		; 7B
 	SBC $FFFD.w,X		; FD FD FF
 	SBC $FFFEFF.l,X		; FF FF FE FF
 	SBC $FF7F9F.l,X		; FF 9F 7F FF
@@ -4686,7 +4686,7 @@
 	ORA $0F0F0F.l		; 0F 0F 0F 0F
 	ORA $1F6F1F.l,X		; 1F 1F 6F 1F
 	ADC [$8F.b],Y		; 77 8F
-	tda		; 7B
+	TDA		; 7B
 	ORA [$F9.b]		; 07 F9
 	BRK $FF.b		; 00 FF
 	BRK $F2.b		; 00 F2
@@ -4732,7 +4732,7 @@
 	JSR $7F0F.w		; 20 0F 7F
 	CLC		; 18
 	AND [$0E.b],Y		; 37 0E
-	tas		; 1B
+	TAS		; 1B
 	ORA ($2F.b)		; 12 2F
 	INC A		; 1A
 	ADC $F78F77.l,X		; 7F 77 8F F7
@@ -4874,7 +4874,7 @@
 	ADC [$18.b]		; 67 18
 	ADC [$00.b],Y		; 77 00
 	AND [$0C.b],Y		; 37 0C
-	tas		; 1B
+	TAS		; 1B
 	ORA $0E.b,X		; 15 0E
 	COP $06.b		; 02 06
 	COP $02.b		; 02 02
@@ -5001,7 +5001,7 @@
 
 	LDA $C15EC0.l,X		; BF C0 5E C1
 	EOR ($4C.b,S),Y		; 53 4C
-	tad		; 5B
+	TAD		; 5B
 	.db $42, $25		; 42 25
 	BIT $0F.b		; 24 0F
 	ORA $00FF.w		; 0D FF 00
@@ -5021,7 +5021,7 @@
 	INC $FF00.w,X		; FE 00 FF
 	BRK $FF.b		; 00 FF
 	ORA ($F5.b,S),Y		; 13 F5
-	tas		; 1B
+	TAS		; 1B
 	SBC #$6040.w		; E9 40 60
 	CPX #$60E0.w		; E0 E0 60
 	BRK $20.b		; 00 20
@@ -5031,9 +5031,9 @@
 	EOR $595E.w,Y		; 59 5E 59
 	LSR $7159.w		; 4E 59 71
 	ADC #$597E.w		; 69 7E 59
-	tda		; 7B
+	TDA		; 7B
 	EOR #$496B.w		; 49 6B 49
-	tad		; 5B
+	TAD		; 5B
 	EOR #$498B.w		; 49 8B 49
 	ROR $39.b,X		; 76 39
 	STX $39.b		; 86 39
@@ -5491,7 +5491,7 @@
 	RTI		; 40
 
 	SBC $FC.b,S		; E3 FC
-	tsa		; 3B
+	TSA		; 3B
 	BIT $C0E2.w,X		; 3C E2 C0
 	INX		; E8
 	CPX #$B1.b		; E0 B1
@@ -5645,7 +5645,7 @@
 	COP $FF.b		; 02 FF
 	ROL $FF.b,X		; 36 FF
 	ROL $FF.b,X		; 36 FF
-	tda		; 7B
+	TDA		; 7B
 	ADC $3DDEDF.l,X		; 7F DF DE 3D
 	STZ $7F.b		; 64 7F
 	EOR $AF.b,S		; 43 AF
@@ -5654,7 +5654,7 @@
 	BRK $81.b		; 00 81
 	RTS		; 60
 
-	tas		; 1B
+	TAS		; 1B
 	CPY #$1C.b		; C0 1C
 	CPX #$00.b		; E0 00
 	CPX #$00.b		; E0 00
@@ -5917,7 +5917,7 @@
 	CPX #$FE.b		; E0 FE
 	BRK $FF.b		; 00 FF
 	ORA ($F7.b,X)		; 01 F7
-	tas		; 1B
+	TAS		; 1B
 	SBC $60C119.l		; EF 19 C1 60
 	CPX #$60.b		; E0 60
 	LDY #$60.b		; A0 60
@@ -6420,7 +6420,7 @@
 	BRK $00.b		; 00 00
 	BRK $F0.b		; 00 F0
 	ORA $C53EC9.l,X		; 1F C9 3E C5
-	tsa		; 3B
+	TSA		; 3B
 .INDEX 8
 	SEP #$1F		; E2 1F
 	SBC $F40A.w,Y		; F9 0A F4
@@ -6552,7 +6552,7 @@
 	CLV		; B8
 	LDA $90.b,X		; B5 90
 	LDA ($26.b)		; B2 26
-	tas		; 1B
+	TAS		; 1B
 	BIT #$9F97.w		; 89 97 9F
 	LDA #$4C0D.w		; A9 0D 4C
 	LDY $F0B7.w		; AC B7 F0
@@ -6667,7 +6667,7 @@
 	COP $07.b		; 02 07
 	ORA [$01.b]		; 07 01
 	ORA $241614.l		; 0F 14 16 24
-	tda		; 7B
+	TDA		; 7B
 	CPY #$58FF.w		; C0 FF 58
 	SBC $1FFDD5.l,X		; FF D5 FD 1F
 	LDX $00.b		; A6 00
@@ -7050,7 +7050,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $24.b		; 00 24
-	tad		; 5B
+	TAD		; 5B
 	BIT #$B1F6.w		; 89 F6 B1
 	DEX		; CA
 	EOR ($FF.b,X)		; 41 FF
@@ -7152,7 +7152,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	SEC		; 38
-	tda		; 7B
+	TDA		; 7B
 	STZ $E1.b,X		; 74 E1
 	ORA $F0.b,S		; 03 F0
 	PHA		; 48
@@ -7475,7 +7475,7 @@
 	STX $7D.b		; 86 7D
 	AND $841B90.l		; 2F 90 1B 84
 	LDA $932410.l		; AF 10 24 93
-	tas		; 1B
+	TAS		; 1B
 	STY $03.b,X		; 94 03
 	TSB $0305.w		; 0C 05 03
 	PHD		; 0B
@@ -7530,7 +7530,7 @@
 	INC $CFFE.w,X		; FE FE CF
 	AND $030503.l,X		; 3F 03 05 03
 	ORA [$11.b]		; 07 11
-	tas		; 1B
+	TAS		; 1B
 	JSL $5D003F.l		; 22 3F 00 5D
 	STX $9873.w		; 8E 73 98
 	ROR $5D8B.w		; 6E 8B 5D
@@ -7639,7 +7639,7 @@
 	XBA		; EB
 	BNE  91.b		; D0 5B
 	SED		; F8
-	tsa		; 3B
+	TSA		; 3B
 	RTL		; 6B
 
 	ORA $0F0936.l,X		; 1F 36 09 0F
@@ -7685,7 +7685,7 @@
 	BCC 123.b		; 90 7B
 	STA [$6B.b]		; 87 6B
 	ADC ($79.b,S),Y		; 73 79
-	tda		; 7B
+	TDA		; 7B
 	ADC $817B.w,Y		; 79 7B 81
 	RTL		; 6B
 
@@ -7706,7 +7706,7 @@
 	BVS  95.b		; 70 5F
 	PLB		; AB
 	STA $58A7A9.l,X		; 9F A9 A7 58
-	tsa		; 3B
+	TSA		; 3B
 	BNE -111.b		; D0 91
 	CPY #$40A1.w		; C0 A1 40
 	STA ($00.b,X)		; 81 00
@@ -7754,7 +7754,7 @@
 	SBC $ED7F.w,Y		; F9 7F ED
 	AND $10D1.w		; 2D D1 10
 	SBC $FC14.w,X		; FD 14 FC
-	tsa		; 3B
+	TSA		; 3B
 	CMP $3F2A.w		; CD 2A 3F
 	ORA ($7F.b,X)		; 01 7F
 	ORA ($09.b,X)		; 01 09
@@ -8193,7 +8193,7 @@
 	ADC $EE.b,S		; 63 EE
 	BMI  84.b		; 30 54
 	AND ($75.b,S),Y		; 33 75
-	tas		; 1B
+	TAS		; 1B
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $09.b		; 00 09
@@ -8335,7 +8335,7 @@
 	EOR ($F8.b,S),Y		; 53 F8
 	XCE		; FB
 	JMP ($EE69.w)		; 6C 69 EE
-	tda		; 7B
+	TDA		; 7B
 	STY $FE.b		; 84 FE
 	BRK $FE.b		; 00 FE
 	BRK $B8.b		; 00 B8
@@ -8390,7 +8390,7 @@
 	INC $33.b		; E6 33
 	STY $6F.b		; 84 6F
 	TYA		; 98
-	tda		; 7B
+	TDA		; 7B
 	STA $7D.b,S		; 83 7D
 	.db $62, $95, $5E		; 62 95 5E
 	LDA $0000.w,Y		; B9 00 00
@@ -8509,7 +8509,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	INX		; E8
-	tsa		; 3B
+	TSA		; 3B
 	LSR $0AF3.w		; 4E F3 0A
 	SBC $06.b,X		; F5 06
 	ADC $FD44.w,X		; 7D 44 FD
@@ -8624,7 +8624,7 @@
 	BPL -64.b		; 10 C0
 	BMI -64.b		; 30 C0
 	JSR $00C0.w		; 20 C0 00
-	tsa		; 3B
+	TSA		; 3B
 	PLX		; FA
 	ROL $BFD9.w		; 2E D9 BF
 	EOR $FE0EF6.l		; 4F F6 0E FE
@@ -8795,7 +8795,7 @@
 	LSR $C2.b		; 46 C2
 	EOR $3A.b,S		; 43 3A
 	ADC [$8B.b],Y		; 77 8B
-	tas		; 1B
+	TAS		; 1B
 	CPX $21.b		; E4 21
 	PLD		; 2B
 	BVS  -4.b		; 70 FC
@@ -8823,7 +8823,7 @@
 	AND $FF1FFF.l,X		; 3F FF 1F FF
 	CMP $0C303C.l,X		; DF 3C 30 0C
 	ADC $46.b,X		; 75 46
-	tda		; 7B
+	TDA		; 7B
 	LDA $9F.b,S		; A3 9F
 	AND $FB0767.l,X		; 3F 67 07 FB
 	BRK $9C.b		; 00 9C
@@ -9159,7 +9159,7 @@
 	BEQ  15.b		; F0 0F
 	INX		; E8
 	ORA $C52BCD.l,X		; 1F CD 2B C5
-	tsa		; 3B
+	TSA		; 3B
 	CMP $AEF030.l		; CF 30 F0 AE
 	ORA ($02.b,X)		; 01 02
 	ORA $04.b,S		; 03 04
@@ -9191,7 +9191,7 @@
 	XCE		; FB
 	ASL $77.b		; 06 77
 	ASL A		; 0A
-	tas		; 1B
+	TAS		; 1B
 	ASL $9F.b		; 06 9F
 	BRK $06.b		; 00 06
 	CMP $1803.w,Y		; D9 03 18
@@ -9425,7 +9425,7 @@
 	ADC $72.b,S		; 63 72
 	ADC ($75.b,S),Y		; 73 75
 	STA $75.b,S		; 83 75
-	tda		; 7B
+	TDA		; 7B
 	ADC $6D73.w		; 6D 73 6D
 	ADC [$65.b],Y		; 77 65
 	STA $6D.b,S		; 83 6D
@@ -9704,7 +9704,7 @@
 	BRK $00.b		; 00 00
 	PLB		; AB
 	PLY		; 7A
-	tsa		; 3B
+	TSA		; 3B
 	INY		; C8
 	ROL $D8.b		; 26 D8
 	DEC A		; 3A
@@ -9822,7 +9822,7 @@
 	BRA   0.b		; 80 00
 	BRK $10.b		; 00 10
 	CPY #$D6BE.w		; C0 BE D6
-	tsa		; 3B
+	TSA		; 3B
 	DEC $FC.b		; C6 FC
 	ORA ($FD.b,X)		; 01 FD
 	ORA $FF.b,S		; 03 FF
@@ -9907,7 +9907,7 @@
 	ASL $1F19.w		; 0E 19 1F
 	BRA  63.b		; 80 3F
 	CMP $EFD0F1.l		; CF F1 D0 EF
-	tas		; 1B
+	TAS		; 1B
 	SBC $D6740D.l,X		; FF 0D 74 D6
 	LDY $0002.w		; AC 02 00
 	COP $04.b		; 02 04
@@ -9983,7 +9983,7 @@
 	STA $00C200.l,X		; 9F 00 C2 00
 	BEQ   0.b		; F0 00
 	BVS   0.b		; 70 00
-	tda		; 7B
+	TDA		; 7B
 	BIT $3F1C.w,X		; 3C 1C 3F
 	ORA [$0F.b],Y		; 17 0F
 	ORA [$00.b]		; 07 00
@@ -10308,7 +10308,7 @@
 	BVC  -1.b		; 50 FF
 	RTI		; 40
 
-	tda		; 7B
+	TDA		; 7B
 	LDY #$5192.w		; A0 92 51
 	CMP $941C.w,X		; DD 1C 94
 	TRB $0400.w		; 1C 00 04
@@ -10372,7 +10372,7 @@
 	BRK $E4.b		; 00 E4
 	SBC $EE11.w,X		; FD 11 EE
 	EOR $84D3.w		; 4D D3 84
-	tad		; 5B
+	TAD		; 5B
 	CLD		; D8
 	LDA $1B8FF2.l,X		; BF F2 8F 1B
 	TSB $07.b		; 04 07
@@ -10964,7 +10964,7 @@
 	COP $03.b		; 02 03
 	ORA ($00.b,X)		; 01 00
 	CMP ($FB.b),Y		; D1 FB
-	tas		; 1B
+	TAS		; 1B
 	LDX $8C.b		; A6 8C
 	LDA ($29.b)		; B2 29
 	LDX $DA.b,Y		; B6 DA
@@ -11144,7 +11144,7 @@
 	TXY		; 9B
 	ADC $52DFDA.l,X		; 7F DA DF 52
 	ADC $E83EE2.l,X		; 7F E2 3E E8
-	tsa		; 3B
+	TSA		; 3B
 	STA ($5D.b,S),Y		; 93 5D
 	INC $A27F.w,X		; FE 7F A2
 	SBC $200000.l,X		; FF 00 00 20
@@ -11270,7 +11270,7 @@
 	BRK $14.b		; 00 14
 	ORA ($13.b,X)		; 01 13
 	TSB $120D.w		; 0C 0D 12
-	tas		; 1B
+	TAS		; 1B
 	TSB $00.b		; 04 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -11427,7 +11427,7 @@
 	STA [$6F.b],Y		; 97 6F
 	BPL  71.b		; 10 47
 	CLC		; 18
-	tas		; 1B
+	TAS		; 1B
 	CPX $00.b		; E4 00
 	BRK $80.b		; 00 80
 	BRA 112.b		; 80 70
@@ -11501,7 +11501,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tas		; 1B
+	TAS		; 1B
 	INY		; C8
 	EOR $A618.w		; 4D 18 A6
 	PEA $D5C5.w		; F4 C5 D5
@@ -11535,7 +11535,7 @@
 	JMP ($2D3E.w)		; 6C 3E 2D
 	ASL $7C59.w,X		; 1E 59 7C
 	CMP ($C2.b,X)		; C1 C2
-	tsa		; 3B
+	TSA		; 3B
 	BRA -21.b		; 80 EB
 	PHA		; 48
 	CMP $68.b,S		; C3 68
@@ -11615,7 +11615,7 @@
 	ORA ($81.b),Y		; 11 81
 	EOR $87.b,S		; 43 87
 	ORA ($80.b,S),Y		; 13 80
-	tda		; 7B
+	TDA		; 7B
 	LDX $995D.w,Y		; BE 5D 99
 	ADC $E69F.w,X		; 7D 9F E6
 	SBC $B7EB07.l,X		; FF 07 EB B7
@@ -11701,10 +11701,10 @@
 .ACCU 16
 	REP #$20		; C2 20
 	PEA $E40B.w		; F4 0B E4
-	tas		; 1B
+	TAS		; 1B
 	AND ($CE.b),Y		; 31 CE
 	AND $402FD0.l		; 2F D0 2F 40
-	tda		; 7B
+	TDA		; 7B
 	TSB $00.b		; 04 00
 	BRA -32.b		; 80 E0
 	CPY #$C0B8.w		; C0 B8 C0
@@ -11850,7 +11850,7 @@
 	LDA [$50.b],Y		; B7 50
 	ORA $EB7E.w		; 0D 7E EB
 	CMP ($17.b,S),Y		; D3 17
-	tas		; 1B
+	TAS		; 1B
 	DEY		; 88
 	PLY		; 7A
 	ROL $99.b		; 26 99
@@ -12034,7 +12034,7 @@
 	BRK $00.b		; 00 00
 	BRK $BB.b		; 00 BB
 	ADC [$7F.b],Y		; 77 7F
-	tsa		; 3B
+	TSA		; 3B
 	SEC		; 38
 	ORA $081F0C.l,X		; 1F 0C 1F 08
 	ORA [$03.b]		; 07 03
@@ -12074,7 +12074,7 @@
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
-	tda		; 7B
+	TDA		; 7B
 	TSB $00.b		; 04 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -12371,7 +12371,7 @@
 	BRK $00.b		; 00 00
 	BMI  96.b		; 30 60
 	LDA $7F3B7F.l,X		; BF 7F 3B 7F
-	tsa		; 3B
+	TSA		; 3B
 	ORA $00190A.l,X		; 1F 0A 19 00
 	BRK $00.b		; 00 00
 	BRK $01.b		; 00 01
@@ -12640,7 +12640,7 @@
 	BMI -16.b		; 30 F0
 	TSX		; BA
 	JMP ($7F3F.w,X)		; 7C 3F 7F
-	tas		; 1B
+	TAS		; 1B
 	AND $161F1B.l,X		; 3F 1B 1F 16
 	ORA #$0000.w		; 09 00 00
 	BRK $00.b		; 00 00
@@ -12938,7 +12938,7 @@
 	BRK $00.b		; 00 00
 	BIT $7F7C.w,X		; 3C 7C 7F
 	ROL $1F3F.w,X		; 3E 3F 1F
-	tas		; 1B
+	TAS		; 1B
 	ORA $000001.l		; 0F 01 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -13004,7 +13004,7 @@
 	SBC $FF7F0F.l,X		; FF 0F 7F FF
 	SBC $33E47F.l,X		; FF 7F E4 33
 	SED		; F8
-	tas		; 1B
+	TAS		; 1B
 	ADC [$1F.b]		; 67 1F
 	BIT $0F.b,X		; 34 0F
 	ROL $2701.w,X		; 3E 01 27
@@ -15288,7 +15288,7 @@
 	BCC   1.b		; 90 01
 	BRK $F3.b		; 00 F3
 	TSB $005F.w		; 0C 5F 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $F8.b		; 00 F8
 	TSB $00C0.w		; 0C C0 00
@@ -15301,7 +15301,7 @@
 	EOR $01A5.w,Y		; 59 A5 01
 	BRK $73.b		; 00 73
 	ORA $005F.w		; 0D 5F 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $74.b		; 00 74
 	ORA $00C0.w		; 0D C0 00
@@ -15537,7 +15537,7 @@
 	CPY #$9501.w		; C0 01 95
 	LDA $01.b		; A5 01
 	BRK $DB.b		; 00 DB
-	tas		; 1B
+	TAS		; 1B
 	SBC $958D00.l		; EF 00 8D 95
 	ORA ($00.b,X)		; 01 00
 	ROR A		; 6A
@@ -15849,7 +15849,7 @@
 	TXY		; 9B
 	ORA ($00.b,X)		; 01 00
 	ROR A		; 6A
-	tsa		; 3B
+	TSA		; 3B
 	BMI   1.b		; 30 01
 	EOR $91.b,X		; 55 91
 	ORA ($00.b,X)		; 01 00
@@ -15895,7 +15895,7 @@
 	BRK $31.b		; 00 31
 	ROL A		; 2A
 	ADC [$00.b],Y		; 77 00
-	tda		; 7B
+	TDA		; 7B
 	LDA [$00.b]		; A7 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -15967,7 +15967,7 @@
 	BRK $9E.b		; 00 9E
 	PHP		; 08
 	EOR ($00.b,S),Y		; 53 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $9E.b		; 00 9E
 	PHP		; 08
@@ -16070,7 +16070,7 @@
 	CPX #$401A.w		; E0 1A 40
 	BRK $C5.b		; 00 C5
 	LDA $B70001.l,X		; BF 01 00 B7
-	tas		; 1B
+	TAS		; 1B
 	CLD		; D8
 	BRK $57.b		; 00 57
 	STA ($01.b,S),Y		; 93 01
@@ -16308,11 +16308,11 @@
 	SBC $9A5D00.l,X		; FF 00 5D 9A
 	ORA ($00.b,X)		; 01 00
 	PLP		; 28
-	tas		; 1B
+	TAS		; 1B
 	BRK $01.b		; 00 01
 	ADC $01A4.w		; 6D A4 01
 	BRK $80.b		; 00 80
-	tas		; 1B
+	TAS		; 1B
 	ORA $9A5D01.l,X		; 1F 01 5D 9A
 	ORA ($00.b,X)		; 01 00
 	ROR $001C.w		; 6E 1C 00
@@ -16598,7 +16598,7 @@
 	ORA ($3B.b,X)		; 01 3B
 	STA $01.b,X		; 95 01
 	BRK $0C.b		; 00 0C
-	tsa		; 3B
+	TSA		; 3B
 	AND $953B01.l,X		; 3F 01 3B 95
 	ORA ($00.b,X)		; 01 00
 	LDA $008F3B.l,X		; BF 3B 8F 00
@@ -16618,7 +16618,7 @@
 	STA $01.b,X		; 95 01
 	BRK $AC.b		; 00 AC
 	ROL $00B8.w,X		; 3E B8 00
-	tsa		; 3B
+	TSA		; 3B
 	STA $01.b,X		; 95 01
 	BRK $18.b		; 00 18
 	AND $3B008E.l,X		; 3F 8E 00 3B
@@ -16740,7 +16740,7 @@
 	LDA $01.b		; A5 01
 	BRK $70.b		; 00 70
 	MVN $00,$E5		; 54 E5 00
-	tsa		; 3B
+	TSA		; 3B
 	STA $05.b,X		; 95 05
 	BRK $80.b		; 00 80
 	MVN $01,$3F		; 54 3F 01
@@ -16804,14 +16804,14 @@
 	BRK $3F.b		; 00 3F
 	INC $0001.w		; EE 01 00
 	PLP		; 28
-	tad		; 5B
+	TAD		; 5B
 	BEQ   1.b		; F0 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $38.b		; 00 38
-	tad		; 5B
+	TAD		; 5B
 	BEQ   1.b		; F0 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $0C.b		; 00 0C
 	JMP $5100EE.l		; 5C EE 00 51
@@ -17064,7 +17064,7 @@
 	LDA $01.b		; A5 01
 	BRK $85.b		; 00 85
 	EOR #$01A8.w		; 49 A8 01
-	tda		; 7B
+	TDA		; 7B
 	LDA ($01.b),Y		; B1 01
 	BRK $F2.b		; 00 F2
 	LSR A		; 4A
@@ -17167,7 +17167,7 @@
 	LDY $59.b		; A4 59
 	ORA $B55501.l		; 0F 01 55 B5
 	ORA ($00.b,X)		; 01 00
-	tsa		; 3B
+	TSA		; 3B
 	PHY		; 5A
 	BRA   1.b		; 80 01
 	ADC $A5.b		; 65 A5
@@ -17185,7 +17185,7 @@
 	ORA ($51.b,X)		; 01 51
 	LDA ($01.b),Y		; B1 01
 	BRK $F0.b		; 00 F0
-	tad		; 5B
+	TAD		; 5B
 	ORA $934901.l		; 0F 01 49 93
 	ORA ($00.b,X)		; 01 00
 .INDEX 16
@@ -17477,7 +17477,7 @@
 	CPY $5700.w		; CC 00 57
 	STA ($01.b,S),Y		; 93 01
 	BRK $B0.b		; 00 B0
-	tda		; 7B
+	TDA		; 7B
 	PEI ($00.b)		; D4 00
 	SBC $ED.b		; E5 ED
 	ORA ($00.b,X)		; 01 00
@@ -17812,7 +17812,7 @@
 	ORA ($00.b,X)		; 01 00
 	CMP ($13.b)		; D2 13
 	BMI   1.b		; 30 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $68.b		; 00 68
 	TRB $28.b		; 14 28
@@ -18130,7 +18130,7 @@
 	ORA $9A5D01.l		; 0F 01 5D 9A
 	ORA ($00.b,X)		; 01 00
 	TYX		; BB
-	tda		; 7B
+	TDA		; 7B
 	DEC $ED00.w		; CE 00 ED
 	STY $01.b,X		; 94 01
 	BRK $47.b		; 00 47
@@ -18605,7 +18605,7 @@
 	LDX $01.b,Y		; B6 01
 	BRK $03.b		; 00 03
 	STZ $001C.w		; 9C 1C 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $E1.b		; 00 E1
 	STZ $00F3.w		; 9C F3 00
@@ -19087,7 +19087,7 @@
 	ORA $0A.b		; 05 0A
 	RTL		; 6B
 
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $10.b		; 00 10
 	ASL $E4.b		; 06 E4
@@ -19165,7 +19165,7 @@
 	TSB $74.b		; 04 74
 	RTL		; 6B
 
-	tas		; 1B
+	TAS		; 1B
 	LDA $05.b		; A5 05
 	BRK $70.b		; 00 70
 	TSB $BA.b		; 04 BA
@@ -19553,27 +19553,27 @@
 	CMP ($0F.b,X)		; C1 0F
 	BRK $92.b		; 00 92
 	ORA ($10.b,X)		; 01 10
-	tad		; 5B
+	TAD		; 5B
 	STA $0FB7.w		; 8D B7 0F
 	BRK $DD.b		; 00 DD
 	ORA ($2F.b,X)		; 01 2F
-	tad		; 5B
+	TAD		; 5B
 	CMP ($FB.b,S),Y		; D3 FB
 	ORA $023800.l		; 0F 00 38 02
 	BCC  91.b		; 90 5B
 	ADC $0FE1.w,Y		; 79 E1 0F
 	BRK $D2.b		; 00 D2
 	ORA $88.b,S		; 03 88
-	tad		; 5B
+	TAD		; 5B
 	EOR [$93.b],Y		; 57 93
 	ORA $04F400.l		; 0F 00 F4 04
 	CLC		; 18
-	tad		; 5B
+	TAD		; 5B
 	PHB		; 8B
 	SBC ($0F.b,X)		; E1 0F
 	BRK $90.b		; 00 90
 	ORA $50.b		; 05 50
-	tad		; 5B
+	TAD		; 5B
 	STA $0FE1.w,X		; 9D E1 0F
 	BRK $30.b		; 00 30
 	ASL $D8.b		; 06 D8
@@ -19602,7 +19602,7 @@
 	JMP $E2CF5C.l		; 5C 5C CF E2
 	ORA $039C00.l		; 0F 00 9C 03
 	BVS  92.b		; 70 5C
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $B4.b		; 00 B4
 	ORA $70.b,S		; 03 70
@@ -20571,13 +20571,13 @@
 	BRK $00.b		; 00 00
 	ORA ($00.b,X)		; 01 00
 	CLC		; 18
-	tsa		; 3B
+	TSA		; 3B
 	BMI   0.b		; 30 00
-	tda		; 7B
+	TDA		; 7B
 	PLB		; AB
 	ORA ($00.b,X)		; 01 00
 	CLC		; 18
-	tsa		; 3B
+	TSA		; 3B
 	STA ($00.b,S),Y		; 93 00
 	LDA #$0192.w		; A9 92 01
 	BRK $00.b		; 00 00
@@ -20589,7 +20589,7 @@
 	LDA [$B5.b]		; A7 B5
 	ORA ($00.b,X)		; 01 00
 	LDA $3C.b,S		; A3 3C
-	tsa		; 3B
+	TSA		; 3B
 	BRK $81.b		; 00 81
 	TSX		; BA
 	ORA ($00.b,X)		; 01 00
@@ -21153,7 +21153,7 @@
 	ORA ($1B.b,X)		; 01 1B
 	LDA $01.b		; A5 01
 	BRK $0C.b		; 00 0C
-	tas		; 1B
+	TAS		; 1B
 	TRB $B301.w		; 1C 01 B3
 	LDA $01.b		; A5 01
 	BRK $32.b		; 00 32
@@ -21192,7 +21192,7 @@
 	LDA #$01C6.w		; A9 C6 01
 	BRK $60.b		; 00 60
 	AND #$00E8.w		; 29 E8 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $B4.b		; 00 B4
 	ROL A		; 2A
@@ -21297,7 +21297,7 @@
 	ORA ($00.b,X)		; 01 00
 	BRK $72.b		; 00 72
 	BVC   1.b		; 50 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $60.b		; 00 60
 	ADC ($53.b,S),Y		; 73 53
@@ -21345,12 +21345,12 @@
 	CLV		; B8
 	ORA $00.b		; 05 00
 	PHA		; 48
-	tda		; 7B
+	TDA		; 7B
 	TAY		; A8
 	BRK $30.b		; 00 30
 	LDX $01.b,Y		; B6 01
 	BRK $B8.b		; 00 B8
-	tda		; 7B
+	TDA		; 7B
 	JSR $5901.w		; 20 01 59
 	LDA $01.b		; A5 01
 	BRK $50.b		; 00 50
@@ -21553,7 +21553,7 @@
 	BRK $00.b		; 00 00
 	ORA ($00.b,X)		; 01 00
 	PHA		; 48
-	tda		; 7B
+	TDA		; 7B
 	TAY		; A8
 	BRK $33.b		; 00 33
 	LDA $0001.w,X		; BD 01 00
@@ -21561,7 +21561,7 @@
 	BRK $33.b		; 00 33
 	LDA $0001.w,X		; BD 01 00
 	SED		; F8
-	tda		; 7B
+	TDA		; 7B
 	PHP		; 08
 	ORA ($33.b,X)		; 01 33
 	LDA $0000.w,X		; BD 00 00
@@ -21591,7 +21591,7 @@
 	CMP $0D.b		; C5 0D
 	BRK $48.b		; 00 48
 	STZ $0088.w		; 9C 88 00
-	tda		; 7B
+	TDA		; 7B
 	CPX #$0001.w		; E0 01 00
 	BVC -100.b		; 50 9C
 	SBC $AEDD01.l,X		; FF 01 DD AE
@@ -22384,7 +22384,7 @@
 	ORA ($00.b,X)		; 01 00
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	STA $E4CF00.l		; 8F 00 CF E4
 	ORA ($00.b,X)		; 01 00
 	BRK $3C.b		; 00 3C
@@ -22536,7 +22536,7 @@
 	BRK $00.b		; 00 00
 	BRK $02.b		; 00 02
 	BRK $80.b		; 00 80
-	tad		; 5B
+	TAD		; 5B
 	BRA   1.b		; 80 01
 	CMP $0000F1.l,X		; DF F1 00 00
 	BRK $00.b		; 00 00
@@ -22544,7 +22544,7 @@
 	BRK $00.b		; 00 00
 	PHP		; 08
 	BRK $40.b		; 00 40
-	tad		; 5B
+	TAD		; 5B
 	RTI		; 40
 
 	BRK $53.b		; 00 53
@@ -22563,7 +22563,7 @@
 	BRK $78.b		; 00 78
 	RTS		; 60
 
-	tas		; 1B
+	TAS		; 1B
 	BRK $71.b		; 00 71
 	LDA $01.b		; A5 01
 	BRK $88.b		; 00 88
@@ -22877,18 +22877,18 @@
 	BRK $00.b		; 00 00
 	PLY		; 7A
 	BIT $01.b,X		; 34 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $10.b		; 00 10
-	tda		; 7B
+	TDA		; 7B
 	STA $97D100.l		; 8F 00 D1 97
 	ORA ($00.b,X)		; 01 00
 	PLP		; 28
-	tda		; 7B
+	TDA		; 7B
 	AND $97D100.l		; 2F 00 D1 97
 	ORA ($00.b,X)		; 01 00
 	PHA		; 48
-	tda		; 7B
+	TDA		; 7B
 	AND $97D100.l		; 2F 00 D1 97
 	ORA ($00.b,X)		; 01 00
 	STY $7B.b		; 84 7B
@@ -22903,7 +22903,7 @@
 	SBC [$01.b]		; E7 01
 	BRK $80.b		; 00 80
 	ADC $0178.w,X		; 7D 78 01
-	tsa		; 3B
+	TSA		; 3B
 	CMP [$01.b]		; C7 01
 	BRK $80.b		; 00 80
 	ADC $010F.w,X		; 7D 0F 01
@@ -23787,12 +23787,12 @@
 	LDA $94ED00.l,X		; BF 00 ED 94
 	ORA ($00.b,X)		; 01 00
 	CLI		; 58
-	tsa		; 3B
+	TSA		; 3B
 	TXS		; 9A
 	BRK $97.b		; 00 97
 	LDA #$0001.w		; A9 01 00
 	CLI		; 58
-	tsa		; 3B
+	TSA		; 3B
 	STZ $7F00.w		; 9C 00 7F
 	BCC   1.b		; 90 01
 	BRK $68.b		; 00 68
@@ -23900,7 +23900,7 @@
 	LDA $0001.w,Y		; B9 01 00
 	BRA  77.b		; 80 4D
 	BMI   0.b		; 30 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $88.b		; 00 88
 	LSR $007F.w		; 4E 7F 00
@@ -24102,7 +24102,7 @@
 	STA $01F7.w,Y		; 99 F7 01
 	BRK $50.b		; 00 50
 	ORA $005E.w		; 0D 5E 00
-	tda		; 7B
+	TDA		; 7B
 	JMP.w [$0001]		; DC 01 00
 	BCC  13.b		; 90 0D
 	CMP $2500.w,Y		; D9 00 25
@@ -24191,7 +24191,7 @@
 	ORA ($00.b,X)		; 01 00
 	RTS		; 60
 
-	tas		; 1B
+	TAS		; 1B
 	BEQ   0.b		; F0 00
 	PLB		; AB
 	LDA [$01.b],Y		; B7 01
@@ -24421,7 +24421,7 @@
 	ADC $993B.w,Y		; 79 3B 99
 	BRK $05.b		; 00 05
 	SBC $A00001.l		; EF 01 00 A0
-	tsa		; 3B
+	TSA		; 3B
 	CMP $9A5D00.l		; CF 00 5D 9A
 	ORA ($00.b,X)		; 01 00
 	BCS  59.b		; B0 3B
@@ -24597,7 +24597,7 @@
 	SED		; F8
 	ORA ($00.b,X)		; 01 00
 	INC A		; 1A
-	tad		; 5B
+	TAD		; 5B
 	BPL   1.b		; 10 01
 	AND $A6.b,S		; 23 A6
 	ORA ($00.b,X)		; 01 00
@@ -24605,7 +24605,7 @@
 	ORA ($7F.b,X)		; 01 7F
 	BCC   1.b		; 90 01
 	BRK $A4.b		; 00 A4
-	tad		; 5B
+	TAD		; 5B
 	BPL   1.b		; 10 01
 	AND $A6.b,S		; 23 A6
 	ORA ($00.b,X)		; 01 00
@@ -24617,7 +24617,7 @@
 	ADC $000190.l,X		; 7F 90 01 00
 	BPL  93.b		; 10 5D
 	DEC $01.b		; C6 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $7A.b		; 00 7A
 	LSR $0110.w,X		; 5E 10 01
@@ -24952,15 +24952,15 @@
 	BRK $01.b		; 00 01
 	BRK $A0.b		; 00 A0
 	CMP #$00D8.w		; C9 D8 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $C0.b		; 00 C0
 	CMP #$00D8.w		; C9 D8 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $E0.b		; 00 E0
 	CMP #$00D8.w		; C9 D8 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $00.b		; 00 00
 	DEX		; CA
@@ -25212,7 +25212,7 @@
 	DEC $0001.w,X		; DE 01 00
 	RTI		; 40
 
-	tad		; 5B
+	TAD		; 5B
 	JMP ($A101.w,X)		; 7C 01 A1
 	DEC $0001.w,X		; DE 01 00
 	BRA  91.b		; 80 5B
@@ -25220,7 +25220,7 @@
 	ORA ($1B.b,X)		; 01 1B
 	LDA $01.b		; A5 01
 	BRK $C0.b		; 00 C0
-	tad		; 5B
+	TAD		; 5B
 	JMP ($BF01.w,X)		; 7C 01 BF
 	DEC $0001.w,X		; DE 01 00
 	BRK $5C.b		; 00 5C
@@ -25321,7 +25321,7 @@
 	JMP.w [$0001]		; DC 01 00
 	RTI		; 40
 
-	tsa		; 3B
+	TSA		; 3B
 	BVS   1.b		; 70 01
 	CMP ($DC.b),Y		; D1 DC
 	ORA ($00.b,X)		; 01 00
@@ -25347,7 +25347,7 @@
 	LDA $01.b		; A5 01
 	BRK $10.b		; 00 10
 	AND $0178.w,X		; 3D 78 01
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $40.b		; 00 40
 	AND $0170.w,X		; 3D 70 01
@@ -25372,7 +25372,7 @@
 	ORA ($00.b,X)		; 01 00
 	COP $00.b		; 02 00
 	BRK $01.b		; 00 01
-	tsa		; 3B
+	TSA		; 3B
 	JSR ($0000.w,X)		; FC 00 00
 	BRK $00.b		; 00 00
 	BRK $00.b		; 00 00
@@ -25585,7 +25585,7 @@
 	ORA ($BD.b,X)		; 01 BD
 	ORA $05E800.l		; 0F 00 E8 05
 	BNE 104.b		; D0 68
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $00.b		; 00 00
 	ORA [$E0.b]		; 07 E0
@@ -25614,7 +25614,7 @@
 	BRK $40.b		; 00 40
 	BRK $38.b		; 00 38
 	ROR A		; 6A
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $40.b		; 00 40
 	BRK $5A.b		; 00 5A
@@ -25623,7 +25623,7 @@
 	BRK $40.b		; 00 40
 	BRK $78.b		; 00 78
 	ROR A		; 6A
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $88.b		; 00 88
 	BRK $7F.b		; 00 7F
@@ -25687,7 +25687,7 @@
 	STA $9F.b,S		; 83 9F
 	ORA $058000.l		; 0F 00 80 05
 	TRB $6A.b		; 14 6A
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $80.b		; 00 80
 	ORA $F0.b		; 05 F0
@@ -25823,7 +25823,7 @@
 	ORA [$B8.b]		; 07 B8
 	RTL		; 6B
 
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $88.b		; 00 88
 	ORA [$BA.b]		; 07 BA
@@ -25834,7 +25834,7 @@
 	CLV		; B8
 	RTL		; 6B
 
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $C0.b		; 00 C0
 	ORA [$AF.b]		; 07 AF
@@ -26254,15 +26254,15 @@
 	BRK $E7.b		; 00 E7
 	BNE   1.b		; D0 01
 	BRK $40.b		; 00 40
-	tas		; 1B
+	TAS		; 1B
 	LDY #$C100.w		; A0 00 C1
 	CMP ($01.b),Y		; D1 01
 	BRK $C0.b		; 00 C0
-	tas		; 1B
+	TAS		; 1B
 	LDY #$6700.w		; A0 00 67
 	CMP ($01.b)		; D2 01
 	BRK $C0.b		; 00 C0
-	tas		; 1B
+	TAS		; 1B
 	RTI		; 40
 
 	ORA ($89.b,X)		; 01 89
@@ -26293,14 +26293,14 @@
 	STZ $0001.w		; 9C 01 00
 	BCC  31.b		; 90 1F
 	BEQ   1.b		; F0 01
-	tda		; 7B
+	TDA		; 7B
 	STZ $0001.w		; 9C 01 00
 	CPY #$F01F.w		; C0 1F F0
 	ORA ($7B.b,X)		; 01 7B
 	STZ $0001.w		; 9C 01 00
 	BEQ  31.b		; F0 1F
 	BEQ   1.b		; F0 01
-	tda		; 7B
+	TDA		; 7B
 	STZ $0001.w		; 9C 01 00
 	JSR $F020.w		; 20 20 F0
 	ORA ($7B.b,X)		; 01 7B
@@ -26582,7 +26582,7 @@
 	LDA $9A5D00.l		; AF 00 5D 9A
 	ORA ($00.b,X)		; 01 00
 	PLP		; 28
-	tas		; 1B
+	TAS		; 1B
 	SBC $B8C300.l		; EF 00 C3 B8
 	ORA ($00.b,X)		; 01 00
 	BRK $1C.b		; 00 1C
@@ -26984,7 +26984,7 @@
 	ORA ($00.b,X)		; 01 00
 	BMI 106.b		; 30 6A
 	BCS   0.b		; B0 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $4E.b		; 00 4E
 	RTL		; 6B
@@ -27022,7 +27022,7 @@
 	BRK $00.b		; 00 00
 	BRK $04.b		; 00 04
 	BRK $10.b		; 00 10
-	tad		; 5B
+	TAD		; 5B
 	BNE   0.b		; D0 00
 	LDA $04A3.w,Y		; B9 A3 04
 	BRK $90.b		; 00 90
@@ -27249,7 +27249,7 @@
 	ORA $028000.l		; 0F 00 80 02
 	CLI		; 58
 	LSR A		; 4A
-	tas		; 1B
+	TAS		; 1B
 	LDA $0F.b		; A5 0F
 	BRK $F0.b		; 00 F0
 	COP $D0.b		; 02 D0
@@ -27580,7 +27580,7 @@
 	JSR $F101.w		; 20 01 F1
 	LDA [$01.b],Y		; B7 01
 	BRK $70.b		; 00 70
-	tsa		; 3B
+	TSA		; 3B
 	CPX $00.b		; E4 00
 	TYX		; BB
 	TXY		; 9B
@@ -27611,7 +27611,7 @@
 	BIT $01E9.w,X		; 3C E9 01
 	BRK $F0.b		; 00 F0
 	ROL $00B0.w,X		; 3E B0 00
-	tas		; 1B
+	TAS		; 1B
 	LDA $01.b		; A5 01
 	BRK $E8.b		; 00 E8
 	AND $8100A4.l,X		; 3F A4 00 81
@@ -27859,7 +27859,7 @@
 	EOR $019A.w,X		; 5D 9A 01
 	BRK $CE.b		; 00 CE
 	AND $008F.w,Y		; 39 8F 00
-	tsa		; 3B
+	TSA		; 3B
 	STA $01.b,X		; 95 01
 	BRK $0D.b		; 00 0D
 	DEC A		; 3A
@@ -27874,10 +27874,10 @@
 	DEC A		; 3A
 	LDA $8300.w,X		; BD 00 83
 	STA $440001.l,X		; 9F 01 00 44
-	tsa		; 3B
+	TSA		; 3B
 	STY $8300.w		; 8C 00 83
 	STA $800001.l,X		; 9F 01 00 80
-	tsa		; 3B
+	TSA		; 3B
 	BPL   1.b		; 10 01
 	STA $9F.b,S		; 83 9F
 	ORA ($00.b,X)		; 01 00
@@ -28149,7 +28149,7 @@
 	LDX $0001.w		; AE 01 00
 	LDA ($57.b),Y		; B1 57
 	STA ($00.b),Y		; 91 00
-	tsa		; 3B
+	TSA		; 3B
 	SBC $A80001.l		; EF 01 00 A8
 	CLI		; 58
 	STA [$00.b]		; 87 00
@@ -28845,7 +28845,7 @@
 	AND #$0E.b		; 29 0E
 	BRK $85.b		; 00 85
 	ROR $20.b,X		; 76 20
-	tda		; 7B
+	TDA		; 7B
 	SBC ($DE.b)		; F2 DE
 	SBC $1A.b,S		; E3 1A
 	RTL		; 6B
@@ -29204,7 +29204,7 @@
 	LDA $0535.w		; AD 35 05
 	CMP #$02.b		; C9 02
 	BRK $F0.b		; 00 F0
-	tsa		; 3B
+	TSA		; 3B
 	JSR $F7F6.w		; 20 F6 F7
 	LDX $82.b		; A6 82
 	BCC  15.b		; 90 0F
@@ -29273,7 +29273,7 @@
 	LDA $32.b		; A5 32
 	CMP #$03.b		; C9 03
 	BRK $D0.b		; 00 D0
-	tas		; 1B
+	TAS		; 1B
 	LDA $4A.b		; A5 4A
 	CLC		; 18
 	ADC #$20.b		; 69 20
