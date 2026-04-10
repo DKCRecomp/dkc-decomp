@@ -112,13 +112,13 @@ snes2asm|    Adresses    |  Content
 
 ### Requirements
 
-For compiling the project, you will need:
+For building the project, you will need:
 
 * **[WLA-DX Assembler](https://github.com/vhelin/wla-dx)**
 
 * **GNU Make**
 
-### Compilation
+### Building
 
 You can test compilation and reassemble ROM :
 
