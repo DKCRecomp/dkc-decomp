@@ -11,11 +11,11 @@ using information found inside the game along with static and/or dynamic analysi
 
 **It is not, and will not, produce a PC port**.
 
-## Table of Contents
+## Table of contents
 - [Overview](#overview)
 - [Features](#features)
-- [Game Information](#game-information)
 - [Structure](#structure)
+- [About the Game](#about-the-game)
 - [Usage](#usage)
 - [References](#references)
 
@@ -24,8 +24,9 @@ using information found inside the game along with static and/or dynamic analysi
 The only version currently used is `SNES US v1.0`. 
 It was initially made by using [`snes2asm`](https://github.com/nathancassano/snes2asm) disassembly tool on a SNES US v1.0 ROM copy. 
 
+This decompilation mostly contains game and audio code. Assets are proprietary and copyrighted by Nintendo Ltd, you will not find any of these here.
+
 >[!NOTE]
->This decompilation mostly contains game and audio code. Assets are proprietary and copyrighted by Nintendo Ltd, you will not find any of these here.
 >You can still use `snes2asm` with a legally provided ROM, for data assets such as `graphics`, `tilemaps`, `palettes`, `audio`, `text` and be extracted by specifying a YAML configuration file.
 > (See [Configuration](https://github.com/nathancassano/snes2asm?tab=readme-ov-file#configuration) section).
 
